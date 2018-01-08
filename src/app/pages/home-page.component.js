@@ -2,7 +2,11 @@ import {WFMComoponent} from 'framework'
 
 class HomePageComponent  extends WFMComoponent{
   constructor(config) {
-    super(config)
+    super(config),
+    this.data = {
+      title:'Заголовок',
+      text:'Текст параграфа, какой-то очень полезный и серьезный текст, в котором ты обязательно подчерпнешь много всего интерестного и полезного'
+    }
   }
 
 }
@@ -15,11 +19,10 @@ export const homePageComponent = new HomePageComponent ({
           <div class="card">
             <div class="card-image">
               <img src="http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg">
-              <span class="card-title">Card Title</span>
+              <span class="card-title">{{title}}</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>{{text}}</p>
             </div>
             <div class="card-action">
               <a href="#">This is a link</a>
