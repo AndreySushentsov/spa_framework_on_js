@@ -2,6 +2,7 @@ import {WFMModule} from 'framework'
 import {appComponent} from './app.component'
 import {appHeader} from './app.header'
 import {appRoutes} from './app.routes'
+import {appHoverDirective} from './common/derectives/hover.derective'
 
 class AppModule  extends WFMModule{
   constructor(config) {
@@ -14,5 +15,8 @@ export const appModule = new AppModule ({
     appHeader
   ],
   bootstrap: appComponent,
-  routes: appRoutes
+  routes: appRoutes,
+  directives:[
+    appHoverDirective
+  ]
 })

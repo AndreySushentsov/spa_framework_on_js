@@ -9,5 +9,9 @@ export const wfm = {
 
   isUndefined(d){
     return typeof d === 'undefined'
+  },
+
+  isEmpty(d){
+    return d.length && d.length === 0
   }
 }
